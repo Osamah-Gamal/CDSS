@@ -2,11 +2,12 @@
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class DiseaseTypes : Form
+    public partial class DiseaseTypes : Form    
     {
         // سلسلة الاتصال بقاعدة البيانات
         string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
@@ -18,27 +19,26 @@ namespace Hospital
         }
 
         public void importExcel()
-        {
-            OpenFileDialog op = new OpenFileDialog();
-            op.Filter = "Excel Sheet(*.xlsx)|*.xlsx|All Files(*.*)|*.*";
-            if (op.ShowDialog() == DialogResult.OK)
             {
-                string filepath = op.FileName;
-                string co = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR=Yes;'";
-                ;
-                co = string.Format(co, filepath);
-                OleDbConnection exc = new OleDbConnection(co);
-                exc.Open();
+             OpenFileDialog op = new OpenFileDialog();
+                op.Filter = "Excel Sheet(* .xlsx)|* .xlsx|All Files(*.*)|*.*";
+                if (op.ShowDialog() == DialogResult.OK)
+                {
+                    string filepath = op.FileName;
+                    string co = " Provider=Microsoft.ACE.OLEDB.9.0.2;Data Source={0};Extended Properties ='Excel 8.0;HDR= yes'";
+                    co = string.Format(co, filepath, "yes");
+                    OleDbConnection exc = new OleDbConnection(co);
+                    exc.Open();
 
-                DataTable dt = exc.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-                string excelsheet = dt.Rows[0]["TABLE_NAME"].ToString();
-                OleDbCommand cmd = new OleDbCommand("SELECT * FROM [" + excelsheet + "]", exc);
-                OleDbDataAdapter dr = new OleDbDataAdapter(cmd);
-                DataTable dts = new DataTable();
-                dr.Fill(dts);
-                dataGridView.DataSource = dts;
-                exc.Close();
-            }
+                    DataTable dt = exc.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+                    string excelsheet = dt.Rows[0]["TABLE_NAME"].ToString();
+                    OleDbCommand cmd = new OleDbCommand("select * from [" + excelsheet + "]", exc);
+                    OleDbDataAdapter dr = new OleDbDataAdapter(cmd);
+                    DataTable dts = new DataTable();
+                    dr.Fill(dts);
+                    dataGridView.DataSource = dts;
+                    exc.Close();
+                }
         }
 
         private void btn_excel_show_Click(object sender, EventArgs e)

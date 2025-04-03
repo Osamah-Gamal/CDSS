@@ -42,10 +42,10 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.text_SymptomId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.text_PatientName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.text_Patientdescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.comb_DiseaseTypes = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.text_PatientName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -66,6 +66,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(141, 38);
             this.guna2Button1.TabIndex = 50;
             this.guna2Button1.Text = "تهية الصفحة";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btn_excel_add
             // 
@@ -119,7 +120,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(400, 179);
+            this.label4.Location = new System.Drawing.Point(400, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(214, 19);
             this.label4.TabIndex = 54;
@@ -175,6 +176,7 @@
             this.btn_search.Size = new System.Drawing.Size(141, 38);
             this.btn_search.TabIndex = 57;
             this.btn_search.Text = "بحث";
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // btn_delete
             // 
@@ -192,6 +194,7 @@
             this.btn_delete.Size = new System.Drawing.Size(141, 38);
             this.btn_delete.TabIndex = 58;
             this.btn_delete.Text = "حذف";
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -209,6 +212,7 @@
             this.btn_update.Size = new System.Drawing.Size(141, 38);
             this.btn_update.TabIndex = 59;
             this.btn_update.Text = "تعديل";
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_add
             // 
@@ -226,6 +230,7 @@
             this.btn_add.Size = new System.Drawing.Size(141, 38);
             this.btn_add.TabIndex = 60;
             this.btn_add.Text = "أضافة";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // dataGridView
             // 
@@ -237,6 +242,7 @@
             this.dataGridView.RowTemplate.Height = 29;
             this.dataGridView.Size = new System.Drawing.Size(898, 190);
             this.dataGridView.TabIndex = 56;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // guna2Panel2
             // 
@@ -272,29 +278,29 @@
             this.text_SymptomId.TabIndex = 63;
             this.text_SymptomId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // text_PatientName
+            // text_Patientdescription
             // 
-            this.text_PatientName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.text_PatientName.BorderRadius = 4;
-            this.text_PatientName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.text_PatientName.DefaultText = "";
-            this.text_PatientName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.text_PatientName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.text_PatientName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.text_PatientName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.text_PatientName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_PatientName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.text_PatientName.ForeColor = System.Drawing.Color.Black;
-            this.text_PatientName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_PatientName.Location = new System.Drawing.Point(626, 145);
-            this.text_PatientName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_PatientName.Multiline = true;
-            this.text_PatientName.Name = "text_PatientName";
-            this.text_PatientName.PlaceholderText = "وصف العرض";
-            this.text_PatientName.SelectedText = "";
-            this.text_PatientName.Size = new System.Drawing.Size(457, 92);
-            this.text_PatientName.TabIndex = 64;
-            this.text_PatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.text_Patientdescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.text_Patientdescription.BorderRadius = 4;
+            this.text_Patientdescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.text_Patientdescription.DefaultText = "";
+            this.text_Patientdescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.text_Patientdescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.text_Patientdescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.text_Patientdescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.text_Patientdescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.text_Patientdescription.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.text_Patientdescription.ForeColor = System.Drawing.Color.Black;
+            this.text_Patientdescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.text_Patientdescription.Location = new System.Drawing.Point(626, 145);
+            this.text_Patientdescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_Patientdescription.Multiline = true;
+            this.text_Patientdescription.Name = "text_Patientdescription";
+            this.text_Patientdescription.PlaceholderText = "وصف العرض";
+            this.text_Patientdescription.SelectedText = "";
+            this.text_Patientdescription.Size = new System.Drawing.Size(457, 92);
+            this.text_Patientdescription.TabIndex = 64;
+            this.text_Patientdescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // comb_DiseaseTypes
             // 
@@ -308,7 +314,7 @@
             this.comb_DiseaseTypes.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comb_DiseaseTypes.ForeColor = System.Drawing.Color.Black;
             this.comb_DiseaseTypes.ItemHeight = 30;
-            this.comb_DiseaseTypes.Location = new System.Drawing.Point(274, 201);
+            this.comb_DiseaseTypes.Location = new System.Drawing.Point(274, 196);
             this.comb_DiseaseTypes.Name = "comb_DiseaseTypes";
             this.comb_DiseaseTypes.Size = new System.Drawing.Size(337, 36);
             this.comb_DiseaseTypes.TabIndex = 65;
@@ -324,28 +330,28 @@
             this.label7.TabIndex = 67;
             this.label7.Text = "معرف العرض";
             // 
-            // guna2TextBox1
+            // text_PatientName
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.BorderRadius = 4;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(23, 38);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "اسم العرض";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(337, 40);
-            this.guna2TextBox1.TabIndex = 66;
-            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.text_PatientName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.text_PatientName.BorderRadius = 4;
+            this.text_PatientName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.text_PatientName.DefaultText = "";
+            this.text_PatientName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.text_PatientName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.text_PatientName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.text_PatientName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.text_PatientName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.text_PatientName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.text_PatientName.ForeColor = System.Drawing.Color.Black;
+            this.text_PatientName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.text_PatientName.Location = new System.Drawing.Point(23, 38);
+            this.text_PatientName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_PatientName.Name = "text_PatientName";
+            this.text_PatientName.PlaceholderText = "اسم العرض";
+            this.text_PatientName.SelectedText = "";
+            this.text_PatientName.Size = new System.Drawing.Size(337, 40);
+            this.text_PatientName.TabIndex = 66;
+            this.text_PatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // guna2Panel1
             // 
@@ -353,7 +359,7 @@
             this.guna2Panel1.BorderRadius = 4;
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel1.Controls.Add(this.text_PatientName);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.text_SymptomId);
             this.guna2Panel1.Location = new System.Drawing.Point(251, 12);
@@ -367,7 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 577);
             this.Controls.Add(this.comb_DiseaseTypes);
-            this.Controls.Add(this.text_PatientName);
+            this.Controls.Add(this.text_Patientdescription);
             this.Controls.Add(this.text_search);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_delete);
@@ -408,10 +414,10 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox text_SymptomId;
-        private Guna.UI2.WinForms.Guna2TextBox text_PatientName;
+        private Guna.UI2.WinForms.Guna2TextBox text_Patientdescription;
         private Guna.UI2.WinForms.Guna2ComboBox comb_DiseaseTypes;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox text_PatientName;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
