@@ -10,8 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OfficeOpenXml;
 using System.IO;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Hospital
 {
@@ -34,24 +34,64 @@ namespace Hospital
 
         public void importExcel()
         {
-            OpenFileDialog op = new OpenFileDialog();
-            op.Filter = "Excel Sheet(* .xlsx)|* .xlsx|All Files(*.*)|*.*";
-            if (op.ShowDialog() == DialogResult.OK)
-            {
-                string filepath = op.FileName;
-                string co = " Provider=Microsoft.ACE.OLEDB.16.0;Data Source={0};Extended Properties ='Excel 8.0;HDR= yes'";
-                co = string.Format(co, filepath, "yes");
-                OleDbConnection exc = new OleDbConnection(co);
-                exc.Open();
+            // إنشاء OpenFileDialog لاختيار ملف Excel
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            openFileDialog.Title = "Select an Excel File";
 
-                DataTable dt = exc.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-                string excelsheet = dt.Rows[1]["TABLE_NAME"].ToString();
-                OleDbCommand cmd = new OleDbCommand("select * from [" + excelsheet + "]", exc);
-                OleDbDataAdapter dr = new OleDbDataAdapter(cmd);
-                DataTable dts = new DataTable();
-                dr.Fill(dts);
-                dataGridView.DataSource = dts;
-                exc.Close();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // إنشاء تطبيق Excel
+                    Excel.Application excelApp = new Excel.Application();
+                    Excel.Workbook excelWorkbook = excelApp.Workbooks.Open(openFileDialog.FileName);
+                    Excel.Worksheet excelWorksheet = excelWorkbook.Sheets[2]; // الورقة الأولى
+                    Excel.Range excelRange = excelWorksheet.UsedRange;
+
+                    int rowCount = excelRange.Rows.Count;
+                    int colCount = excelRange.Columns.Count;
+
+                    // إنشاء DataTable لتخزين البيانات
+                    DataTable dt = new DataTable();
+
+                    // إضافة أعمدة إلى DataTable
+                    for (int j = 1; j <= colCount; j++)
+                    {
+                        dt.Columns.Add(excelRange.Cells[1, j].Value2?.ToString() ?? $"Column{j}");
+                    }
+
+                    // إضافة الصفوف إلى DataTable (بدءًا من الصف الثاني لتخطي العناوين)
+                    for (int i = 2; i <= rowCount; i++)
+                    {
+                        DataRow dr = dt.NewRow();
+                        for (int j = 1; j <= colCount; j++)
+                        {
+                            if (excelRange.Cells[i, j] != null && excelRange.Cells[i, j].Value2 != null)
+                            {
+                                dr[j - 1] = excelRange.Cells[i, j].Value2.ToString();
+                            }
+                        }
+                        dt.Rows.Add(dr);
+                    }
+
+                    // ربط DataTable بـ DataGridView
+                    dataGridView.DataSource = dt;
+
+                    // إغلاق ملف Excel
+                    excelWorkbook.Close(false);
+                    excelApp.Quit();
+
+                    // تحرير الموارد
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelRange);
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelWorksheet);
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelWorkbook);
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         }
 
@@ -67,14 +107,11 @@ namespace Hospital
         // إدخال البيانات من DataGridView إلى SQL Server
         private void SaveDataToDatabase()
         {
-            if (dataGridView.Rows.Count == 0)
+            if (dataGridView.Rows.Count <= 0)
             {
                 MessageBox.Show("لا توجد بيانات لحفظها!", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // تحديث الاتصال مع قاعدة البيانات
-            string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=Hospital;Integrated Security=True;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -86,42 +123,55 @@ namespace Hospital
                     {
                         if (row.IsNewRow) continue; // تخطي الصف الفارغ
 
+                        int diseaseTypeId = Convert.ToInt32(row.Cells[0].Value);
                         string symptomName = row.Cells[1].Value?.ToString()?.Trim();
                         string symptomDescription = row.Cells[2].Value?.ToString()?.Trim() ?? "لا يوجد وصف";
-                        int diseaseTypeId = Convert.ToInt32(row.Cells[0].Value);
 
-                        // التحقق من أن اسم المرض ليس فارغًا
-                        if (!string.IsNullOrWhiteSpace(symptomName))
+                        // التحقق من أن اسم العرض ليس فارغًا
+                        if (string.IsNullOrWhiteSpace(symptomName))
                         {
-                            // التحقق من وجود البيانات مسبقًا
-                            string checkQuery = "SELECT COUNT(*) FROM Symptoms WHERE SymptomName = @SymptomName and DiseaseTypeId=@DiseaseTypeId";
-                            using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                            MessageBox.Show("أحد الصفوف يحتوي على اسم عرض فارغ، سيتم تخطيه!", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            continue;
+                        }
+
+                        // التحقق من وجود نوع المرض أولاً
+                        string checkDiseaseQuery = "SELECT COUNT(*) FROM DiseaseTypes WHERE DiseaseTypeId = @DiseaseTypeId";
+                        using (SqlCommand checkDiseaseCmd = new SqlCommand(checkDiseaseQuery, conn))
+                        {
+                            checkDiseaseCmd.Parameters.AddWithValue("@DiseaseTypeId", diseaseTypeId);
+                            int diseaseCount = (int)checkDiseaseCmd.ExecuteScalar();
+
+                            if (diseaseCount == 0)
                             {
-                                checkCmd.Parameters.AddWithValue("@SymptomName", symptomName);
-                                checkCmd.Parameters.AddWithValue("@DiseaseTypeId", diseaseTypeId);
-                                int count = (int)checkCmd.ExecuteScalar();
-
-                                if (count == 0) // إذا لم يتم العثور على البيانات
-                                {
-                                    string insertQuery = "INSERT INTO Symptoms (SymptomName, SymptomDescription,DiseaseTypeId) VALUES (@SymptomName, @SymptomDescription,@DiseaseTypeId)";
-                                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
-                                    {
-                                        insertCmd.Parameters.AddWithValue("@SymptomName", symptomName);
-                                        insertCmd.Parameters.AddWithValue("@SymptomDescription", symptomDescription);
-                                        insertCmd.Parameters.AddWithValue("@DiseaseTypeId", diseaseTypeId);
-
-                                        insertCmd.ExecuteNonQuery(); // تنفيذ الاستعلام
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show($"العرض '{symptomName}' موجود مسبقًا، سيتم تخطيه!", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                }
+                                MessageBox.Show($"نوع المرض ذو المعرف {diseaseTypeId} غير موجود، سيتم تخطي العرض '{symptomName}'!", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                continue;
                             }
                         }
-                        else
+
+                        // التحقق من عدم وجود العرض لنفس نوع المرض مسبقاً
+                        string checkSymptomQuery = "SELECT COUNT(*) FROM Symptoms WHERE SymptomName = @SymptomName AND DiseaseTypeId = @DiseaseTypeId";
+                        using (SqlCommand checkSymptomCmd = new SqlCommand(checkSymptomQuery, conn))
                         {
-                            MessageBox.Show("أحد الصفوف يحتوي على اسم مرض فارغ، سيتم تخطيه!", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            checkSymptomCmd.Parameters.AddWithValue("@SymptomName", symptomName);
+                            checkSymptomCmd.Parameters.AddWithValue("@DiseaseTypeId", diseaseTypeId);
+                            int symptomCount = (int)checkSymptomCmd.ExecuteScalar();
+
+                            if (symptomCount > 0)
+                            {
+                                MessageBox.Show($"العرض '{symptomName}' موجود مسبقًا لنفس نوع المرض، سيتم تخطيه!", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                continue;
+                            }
+                        }
+
+                        // إضافة العرض الجديد
+                        string insertQuery = "INSERT INTO Symptoms (SymptomName, SymptomDescription, DiseaseTypeId) VALUES (@SymptomName, @SymptomDescription, @DiseaseTypeId)";
+                        using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@SymptomName", symptomName);
+                            insertCmd.Parameters.AddWithValue("@SymptomDescription", symptomDescription);
+                            insertCmd.Parameters.AddWithValue("@DiseaseTypeId", diseaseTypeId);
+
+                            insertCmd.ExecuteNonQuery();
                         }
                     }
 
@@ -134,7 +184,6 @@ namespace Hospital
                 }
             }
         }
-
         private void btn_excel_add_Click(object sender, EventArgs e)
         {
             SaveDataToDatabase();
@@ -207,6 +256,7 @@ namespace Hospital
                 {
                     MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                connection.Close();
             }
         }
 
