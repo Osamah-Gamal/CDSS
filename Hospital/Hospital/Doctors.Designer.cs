@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,39 +49,29 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.text_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(209, 394);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 62;
-            this.dataGridView.RowTemplate.Height = 29;
-            this.dataGridView.Size = new System.Drawing.Size(898, 190);
-            this.dataGridView.TabIndex = 11;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(521, 163);
+            this.label1.Location = new System.Drawing.Point(513, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 19);
+            this.label1.Size = new System.Drawing.Size(129, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "اسم المستخدم";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(554, 239);
+            this.label2.Location = new System.Drawing.Point(545, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 19);
+            this.label2.Size = new System.Drawing.Size(96, 18);
             this.label2.TabIndex = 13;
             this.label2.Text = "كلمة المرور";
             // 
@@ -99,31 +88,31 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(919, 238);
+            this.label4.Location = new System.Drawing.Point(913, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 19);
+            this.label4.Size = new System.Drawing.Size(88, 19);
             this.label4.TabIndex = 18;
             this.label4.Text = "رقم الهاتف";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(932, 164);
+            this.label5.Location = new System.Drawing.Point(928, 164);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 19);
+            this.label5.Size = new System.Drawing.Size(91, 19);
             this.label5.TabIndex = 17;
             this.label5.Text = "التخصص";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(618, 15);
+            this.label6.Location = new System.Drawing.Point(253, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 19);
+            this.label6.Size = new System.Drawing.Size(108, 19);
             this.label6.TabIndex = 20;
             this.label6.Text = "اسم الدكتور";
             // 
@@ -213,13 +202,15 @@
             this.text_DoctorName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.text_DoctorName.ForeColor = System.Drawing.Color.Black;
             this.text_DoctorName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_DoctorName.Location = new System.Drawing.Point(391, 38);
+            this.text_DoctorName.Location = new System.Drawing.Point(26, 33);
             this.text_DoctorName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_DoctorName.Multiline = true;
             this.text_DoctorName.Name = "text_DoctorName";
-            this.text_DoctorName.PlaceholderText = "";
+            this.text_DoctorName.PlaceholderText = "اسم الدكتور";
             this.text_DoctorName.SelectedText = "";
             this.text_DoctorName.Size = new System.Drawing.Size(318, 40);
             this.text_DoctorName.TabIndex = 29;
+            this.text_DoctorName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // text_Specialization
             // 
@@ -237,11 +228,13 @@
             this.text_Specialization.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_Specialization.Location = new System.Drawing.Point(680, 187);
             this.text_Specialization.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_Specialization.Multiline = true;
             this.text_Specialization.Name = "text_Specialization";
-            this.text_Specialization.PlaceholderText = "";
+            this.text_Specialization.PlaceholderText = "التخصص";
             this.text_Specialization.SelectedText = "";
             this.text_Specialization.Size = new System.Drawing.Size(318, 40);
             this.text_Specialization.TabIndex = 30;
+            this.text_Specialization.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // text_PhoneNumber
             // 
@@ -259,11 +252,13 @@
             this.text_PhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_PhoneNumber.Location = new System.Drawing.Point(680, 262);
             this.text_PhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_PhoneNumber.Multiline = true;
             this.text_PhoneNumber.Name = "text_PhoneNumber";
-            this.text_PhoneNumber.PlaceholderText = "";
+            this.text_PhoneNumber.PlaceholderText = "رقم الهاتف";
             this.text_PhoneNumber.SelectedText = "";
             this.text_PhoneNumber.Size = new System.Drawing.Size(318, 40);
             this.text_PhoneNumber.TabIndex = 31;
+            this.text_PhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // text_uesrname
             // 
@@ -281,11 +276,13 @@
             this.text_uesrname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_uesrname.Location = new System.Drawing.Point(315, 187);
             this.text_uesrname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_uesrname.Multiline = true;
             this.text_uesrname.Name = "text_uesrname";
-            this.text_uesrname.PlaceholderText = "";
+            this.text_uesrname.PlaceholderText = "اسم المستخدم";
             this.text_uesrname.SelectedText = "";
             this.text_uesrname.Size = new System.Drawing.Size(318, 40);
             this.text_uesrname.TabIndex = 32;
+            this.text_uesrname.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // text_password
             // 
@@ -303,12 +300,14 @@
             this.text_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_password.Location = new System.Drawing.Point(319, 262);
             this.text_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_password.Multiline = true;
             this.text_password.Name = "text_password";
             this.text_password.PasswordChar = '*';
-            this.text_password.PlaceholderText = "";
+            this.text_password.PlaceholderText = "كلمة المرور";
             this.text_password.SelectedText = "";
             this.text_password.Size = new System.Drawing.Size(318, 40);
             this.text_password.TabIndex = 33;
+            this.text_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // guna2Panel1
             // 
@@ -339,22 +338,23 @@
             this.text_doctorId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.text_doctorId.ForeColor = System.Drawing.Color.Black;
             this.text_doctorId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_doctorId.Location = new System.Drawing.Point(26, 38);
+            this.text_doctorId.Location = new System.Drawing.Point(391, 33);
             this.text_doctorId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.text_doctorId.Name = "text_doctorId";
             this.text_doctorId.PlaceholderText = "";
             this.text_doctorId.SelectedText = "";
             this.text_doctorId.Size = new System.Drawing.Size(322, 40);
             this.text_doctorId.TabIndex = 31;
+            this.text_doctorId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.text_doctorId.TextChanged += new System.EventHandler(this.text_doctorId_TextChanged);
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(257, 15);
+            this.label7.Location = new System.Drawing.Point(609, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 19);
+            this.label7.Size = new System.Drawing.Size(109, 19);
             this.label7.TabIndex = 30;
             this.label7.Text = "معرف الدكتور";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -385,6 +385,7 @@
             this.text_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_search.Location = new System.Drawing.Point(209, 348);
             this.text_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_search.Multiline = true;
             this.text_search.Name = "text_search";
             this.text_search.PlaceholderText = "...البحث بالاسم عن";
             this.text_search.SelectedText = "";
@@ -410,12 +411,45 @@
             this.guna2Button1.Text = "تهية الصفحة";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(1242, -2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(45, 40);
+            this.guna2Button2.TabIndex = 40;
+            this.guna2Button2.Text = "X";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.GridColor = System.Drawing.Color.CadetBlue;
+            this.dataGridView.Location = new System.Drawing.Point(212, 394);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 62;
+            this.dataGridView.RowTemplate.Height = 29;
+            this.dataGridView.Size = new System.Drawing.Size(898, 190);
+            this.dataGridView.TabIndex = 47;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick_1);
+            // 
             // Doctors
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1286, 577);
+            this.ControlBox = false;
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.text_search);
             this.Controls.Add(this.text_password);
@@ -431,22 +465,19 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
-            this.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Doctors";
-            this.Text = "Doctors";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.Load += new System.EventHandler(this.Doctors_Load);
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -468,5 +499,7 @@
         private Guna.UI2.WinForms.Guna2TextBox text_doctorId;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

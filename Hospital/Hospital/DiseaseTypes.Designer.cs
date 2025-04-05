@@ -45,13 +45,13 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.text_DiseaseTypesId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(321, 8);
@@ -63,7 +63,6 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(950, 151);
@@ -143,6 +142,7 @@
             this.text_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_search.Location = new System.Drawing.Point(225, 341);
             this.text_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_search.Multiline = true;
             this.text_search.Name = "text_search";
             this.text_search.PlaceholderText = "...البحث بالاسم عن";
             this.text_search.SelectedText = "";
@@ -260,6 +260,7 @@
             this.text_DiseaseTypes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_DiseaseTypes.Location = new System.Drawing.Point(84, 30);
             this.text_DiseaseTypes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_DiseaseTypes.Multiline = true;
             this.text_DiseaseTypes.Name = "text_DiseaseTypes";
             this.text_DiseaseTypes.PlaceholderText = "اسم المرض";
             this.text_DiseaseTypes.SelectedText = "";
@@ -309,7 +310,6 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(723, 8);
@@ -343,12 +343,31 @@
             this.text_DiseaseTypesId.TabIndex = 51;
             this.text_DiseaseTypesId.TextChanged += new System.EventHandler(this.text_DiseaseTypesId_TextChanged);
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(1242, -1);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(45, 40);
+            this.guna2Button2.TabIndex = 49;
+            this.guna2Button2.Text = "X";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // DiseaseTypes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1286, 577);
+            this.ControlBox = false;
+            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.text_DescriptionDiseaseTypes);
             this.Controls.Add(this.text_search);
             this.Controls.Add(this.btn_search);
@@ -362,14 +381,13 @@
             this.Controls.Add(this.btn_excel_show);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DiseaseTypes";
-            this.Text = "DiseaseTypes";
             this.Load += new System.EventHandler(this.DiseaseTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -392,5 +410,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox text_DiseaseTypesId;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

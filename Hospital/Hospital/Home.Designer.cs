@@ -43,13 +43,13 @@
             this.lb_userid = new System.Windows.Forms.Label();
             this.lb_username = new System.Windows.Forms.Label();
             this.lb_usertype = new System.Windows.Forms.Label();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             label4 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
             // 
-            label4.AutoSize = true;
             label4.Location = new System.Drawing.Point(321, 16);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(50, 19);
@@ -102,6 +102,7 @@
             this.btn_patients.Size = new System.Drawing.Size(141, 38);
             this.btn_patients.TabIndex = 1;
             this.btn_patients.Text = "ادارة المرضى";
+            this.btn_patients.Click += new System.EventHandler(this.btn_patients_Click);
             // 
             // btn_results
             // 
@@ -161,7 +162,6 @@
             // 
             // lbe_date
             // 
-            this.lbe_date.AutoSize = true;
             this.lbe_date.Location = new System.Drawing.Point(81, 25);
             this.lbe_date.Name = "lbe_date";
             this.lbe_date.Size = new System.Drawing.Size(41, 19);
@@ -170,7 +170,6 @@
             // 
             // lbe_time
             // 
-            this.lbe_time.AutoSize = true;
             this.lbe_time.Location = new System.Drawing.Point(77, 54);
             this.lbe_time.Name = "lbe_time";
             this.lbe_time.Size = new System.Drawing.Size(45, 19);
@@ -191,7 +190,6 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(321, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 19);
@@ -200,7 +198,6 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(335, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 19);
@@ -209,7 +206,6 @@
             // 
             // lb_userid
             // 
-            this.lb_userid.AutoSize = true;
             this.lb_userid.Location = new System.Drawing.Point(374, 72);
             this.lb_userid.Name = "lb_userid";
             this.lb_userid.Size = new System.Drawing.Size(22, 19);
@@ -218,7 +214,6 @@
             // 
             // lb_username
             // 
-            this.lb_username.AutoSize = true;
             this.lb_username.Location = new System.Drawing.Point(374, 37);
             this.lb_username.Name = "lb_username";
             this.lb_username.Size = new System.Drawing.Size(48, 19);
@@ -227,19 +222,37 @@
             // 
             // lb_usertype
             // 
-            this.lb_usertype.AutoSize = true;
             this.lb_usertype.Location = new System.Drawing.Point(374, 16);
             this.lb_usertype.Name = "lb_usertype";
             this.lb_usertype.Size = new System.Drawing.Size(39, 19);
             this.lb_usertype.TabIndex = 12;
             this.lb_usertype.Text = "type";
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(1444, 6);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(45, 40);
+            this.guna2Button2.TabIndex = 64;
+            this.guna2Button2.Text = "X";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1492, 744);
+            this.ControlBox = false;
+            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.lb_usertype);
             this.Controls.Add(label4);
             this.Controls.Add(this.lb_userid);
@@ -254,8 +267,6 @@
             this.Controls.Add(this.btn_symptoms);
             this.Controls.Add(this.show_screen);
             this.Controls.Add(this.guna2Panel1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Home";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "الصفحة الرئيسية";
@@ -264,7 +275,6 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -284,5 +294,6 @@
         private System.Windows.Forms.Label lb_userid;
         private System.Windows.Forms.Label lb_username;
         private System.Windows.Forms.Label lb_usertype;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

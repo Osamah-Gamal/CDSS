@@ -24,12 +24,12 @@ namespace Hospital
             InitializeComponent();
             LoadSymptoms();
             loaddatatocombbox();
-
+           
         }
 
         private void Symptoms_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         public void importExcel()
@@ -430,6 +430,10 @@ namespace Hospital
                 comb_DiseaseTypes.SelectedIndex = -1;
             }
         }
-    
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

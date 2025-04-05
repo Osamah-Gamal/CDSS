@@ -15,14 +15,24 @@ namespace Hospital
     public partial class Patients : Form
     {
         // هنا يجب جلب ايدي الدكتور الذي يقوم بحفظ هذا المريض
-        int doctorid = 1;
- 
+        int doctorid ;
+        public int UserID { get; set; }
+
         // سلسلة الاتصال بقاعدة البيانات
         string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
 
         public Patients()
         {
             InitializeComponent();
+            LoadPatients();
+        }
+
+
+        // دالة لتعيين البيانات في 
+        public void SetUserData()
+        {
+            doctorid = UserID;
+            
         }
 
         private void Patients_Load(object sender, EventArgs e)
@@ -200,6 +210,11 @@ namespace Hospital
         {
             LoadPatients();
             ClearInputs();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

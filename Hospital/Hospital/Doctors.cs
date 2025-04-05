@@ -155,22 +155,7 @@ namespace Hospital
             text_doctorId.Text="";
         }
 
-        // عند النقر على صف في DataGridView
-       
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridView.Rows[e.RowIndex];
-                text_doctorId.Text = row.Cells["DoctorId"].Value.ToString();
-                text_DoctorName.Text = row.Cells["DoctorName"].Value.ToString();
-                text_Specialization.Text = row.Cells["Specialization"].Value.ToString();
-                text_PhoneNumber.Text = row.Cells["PhoneNumber"].Value.ToString();
-                text_uesrname.Text = row.Cells["UserName"].Value.ToString();
-                text_password.Text = ""; // لا تعرض كلمة المرور لأسباب أمنية
-            }
-        }
+      
 
         private void btn_search_Click_1(object sender, EventArgs e)
         {
@@ -216,6 +201,33 @@ namespace Hospital
         {
             ClearInputs();
             LoadDoctors();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Doctors_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        // عند النقر على صف في DataGridView
+
+        private void dataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView.Rows[e.RowIndex];
+                text_doctorId.Text = row.Cells["DoctorId"].Value.ToString();
+                text_DoctorName.Text = row.Cells["DoctorName"].Value.ToString();
+                text_Specialization.Text = row.Cells["Specialization"].Value.ToString();
+                text_PhoneNumber.Text = row.Cells["PhoneNumber"].Value.ToString();
+                text_uesrname.Text = row.Cells["UserName"].Value.ToString();
+                text_password.Text = ""; // لا تعرض كلمة المرور لأسباب أمنية
+            }
         }
     }
 }

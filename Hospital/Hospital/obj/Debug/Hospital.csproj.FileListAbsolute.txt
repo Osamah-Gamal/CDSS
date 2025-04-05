@@ -58,3 +58,4 @@ C:\Users\zeyad\CDSS\Hospital\Hospital\obj\Debug\Hospital.Symptoms.resources
 C:\Users\zeyad\CDSS\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.Cache
 C:\Users\zeyad\CDSS\Hospital\Hospital\obj\Debug\Hospital.exe
 C:\Users\zeyad\CDSS\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\zeyad\CDSS\Hospital\Hospital\obj\Debug\Hospital.csprojResolveAssemblyReference.cache
