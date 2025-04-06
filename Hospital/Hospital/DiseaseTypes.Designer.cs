@@ -350,7 +350,7 @@
             // 
             // guna2Button2
             // 
-            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.BorderRadius = 3;
             this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -359,7 +359,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(1242, -1);
+            this.guna2Button2.Location = new System.Drawing.Point(1240, 1);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(45, 40);
             this.guna2Button2.TabIndex = 49;
@@ -398,6 +398,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DiseaseTypes";

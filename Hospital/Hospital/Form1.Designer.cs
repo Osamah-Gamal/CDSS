@@ -169,7 +169,7 @@
             // 
             // guna2Button2
             // 
-            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.BorderRadius = 3;
             this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

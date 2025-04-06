@@ -206,7 +206,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.BorderRadius = 8;
+            this.btn_close.BorderRadius = 3;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -215,7 +215,7 @@
             this.btn_close.FillColor = System.Drawing.Color.Maroon;
             this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Location = new System.Drawing.Point(584, 12);
+            this.btn_close.Location = new System.Drawing.Point(593, 9);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(45, 40);
             this.btn_close.TabIndex = 66;

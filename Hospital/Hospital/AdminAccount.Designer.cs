@@ -53,7 +53,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.BorderRadius = 8;
+            this.btn_close.BorderRadius = 3;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

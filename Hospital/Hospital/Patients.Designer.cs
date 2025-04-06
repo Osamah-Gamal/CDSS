@@ -408,7 +408,7 @@
             // 
             // guna2Button2
             // 
-            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.BorderRadius = 3;
             this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -417,7 +417,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(1241, -1);
+            this.guna2Button2.Location = new System.Drawing.Point(1240, 1);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(45, 40);
             this.guna2Button2.TabIndex = 62;
@@ -448,6 +448,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Patients";
             this.Load += new System.EventHandler(this.Patients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

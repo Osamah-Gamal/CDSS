@@ -141,7 +141,7 @@
             // 
             // guna2Button2
             // 
-            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.BorderRadius = 3;
             this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -166,6 +166,7 @@
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.guna2Panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Results";
             this.Load += new System.EventHandler(this.Results_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
