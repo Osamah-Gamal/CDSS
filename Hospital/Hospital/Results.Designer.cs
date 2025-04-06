@@ -150,7 +150,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(1242, -2);
+            this.guna2Button2.Location = new System.Drawing.Point(1240, 1);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(45, 40);
             this.guna2Button2.TabIndex = 68;
@@ -159,8 +159,7 @@
             // 
             // Results
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1286, 577);
             this.ControlBox = false;

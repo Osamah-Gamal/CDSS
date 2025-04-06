@@ -48,6 +48,7 @@
             this.text_PatientName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,38 +72,42 @@
             // 
             // btn_excel_add
             // 
+            this.btn_excel_add.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_excel_add.BorderRadius = 8;
+            this.btn_excel_add.BorderThickness = 2;
             this.btn_excel_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_excel_add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_excel_add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_excel_add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_excel_add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_excel_add.FillColor = System.Drawing.Color.Gray;
+            this.btn_excel_add.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_excel_add.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_excel_add.ForeColor = System.Drawing.Color.White;
-            this.btn_excel_add.Location = new System.Drawing.Point(0, 511);
+            this.btn_excel_add.Location = new System.Drawing.Point(12, 507);
             this.btn_excel_add.Name = "btn_excel_add";
-            this.btn_excel_add.Size = new System.Drawing.Size(167, 64);
+            this.btn_excel_add.Size = new System.Drawing.Size(216, 64);
             this.btn_excel_add.TabIndex = 49;
-            this.btn_excel_add.Text = "تاكيد اضافة بيانات الاكسل الى الداتا بيس";
+            this.btn_excel_add.Text = "Confirm data entry into the database";
             this.btn_excel_add.Click += new System.EventHandler(this.btn_excel_add_Click);
             // 
             // btn_excel_show
             // 
+            this.btn_excel_show.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_excel_show.BorderRadius = 8;
+            this.btn_excel_show.BorderThickness = 2;
             this.btn_excel_show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_excel_show.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_excel_show.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_excel_show.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_excel_show.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_excel_show.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_excel_show.FillColor = System.Drawing.Color.Navy;
             this.btn_excel_show.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_excel_show.ForeColor = System.Drawing.Color.White;
-            this.btn_excel_show.Location = new System.Drawing.Point(2, 441);
+            this.btn_excel_show.Location = new System.Drawing.Point(13, 439);
             this.btn_excel_show.Name = "btn_excel_show";
-            this.btn_excel_show.Size = new System.Drawing.Size(165, 64);
+            this.btn_excel_show.Size = new System.Drawing.Size(214, 64);
             this.btn_excel_show.TabIndex = 48;
-            this.btn_excel_show.Text = "جلب من ملف Excel";
+            this.btn_excel_show.Text = "Get data from excel";
             this.btn_excel_show.Click += new System.EventHandler(this.btn_excel_show_Click);
             // 
             // label6
@@ -146,7 +151,7 @@
             this.text_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.text_search.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_search.Location = new System.Drawing.Point(240, 339);
             this.text_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -158,6 +163,7 @@
             this.text_search.Size = new System.Drawing.Size(308, 40);
             this.text_search.TabIndex = 62;
             this.text_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.text_search.TextChanged += new System.EventHandler(this.text_search_TextChanged);
             // 
             // btn_search
             // 
@@ -265,7 +271,7 @@
             this.text_SymptomId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_SymptomId.Enabled = false;
             this.text_SymptomId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_SymptomId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.text_SymptomId.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_SymptomId.ForeColor = System.Drawing.Color.Black;
             this.text_SymptomId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_SymptomId.Location = new System.Drawing.Point(495, 38);
@@ -277,6 +283,7 @@
             this.text_SymptomId.Size = new System.Drawing.Size(337, 40);
             this.text_SymptomId.TabIndex = 63;
             this.text_SymptomId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.text_SymptomId.TextChanged += new System.EventHandler(this.text_SymptomId_TextChanged);
             // 
             // text_Patientdescription
             // 
@@ -289,7 +296,7 @@
             this.text_Patientdescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_Patientdescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_Patientdescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_Patientdescription.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.text_Patientdescription.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_Patientdescription.ForeColor = System.Drawing.Color.Black;
             this.text_Patientdescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_Patientdescription.Location = new System.Drawing.Point(626, 145);
@@ -342,7 +349,7 @@
             this.text_PatientName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_PatientName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_PatientName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_PatientName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.text_PatientName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_PatientName.ForeColor = System.Drawing.Color.Black;
             this.text_PatientName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_PatientName.Location = new System.Drawing.Point(23, 38);
@@ -355,6 +362,7 @@
             this.text_PatientName.Size = new System.Drawing.Size(337, 40);
             this.text_PatientName.TabIndex = 66;
             this.text_PatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.text_PatientName.TextChanged += new System.EventHandler(this.text_PatientName_TextChanged);
             // 
             // guna2Panel1
             // 
@@ -388,6 +396,17 @@
             this.guna2Button2.Text = "X";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BorderColor = System.Drawing.Color.Aqua;
+            this.guna2Panel3.BorderRadius = 9;
+            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Location = new System.Drawing.Point(8, 433);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(225, 143);
+            this.guna2Panel3.TabIndex = 70;
+            // 
             // Symptoms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -411,6 +430,7 @@
             this.Controls.Add(this.btn_excel_add);
             this.Controls.Add(this.btn_excel_show);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2Panel3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Symptoms";
@@ -444,5 +464,6 @@
         private Guna.UI2.WinForms.Guna2TextBox text_PatientName;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
     }
 }

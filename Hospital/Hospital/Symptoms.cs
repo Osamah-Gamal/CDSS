@@ -435,5 +435,20 @@ namespace Hospital
         {
             this.Close();
         }
+
+        private void text_SymptomId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text_PatientName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

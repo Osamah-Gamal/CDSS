@@ -86,11 +86,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAccount.Designer.cs">
+      <DependentUpon>AdminAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="DiseaseTypes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DiseaseTypes.Designer.cs">
       <DependentUpon>DiseaseTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorAccount.Designer.cs">
+      <DependentUpon>DoctorAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctors.cs">
       <SubType>Form</SubType>
@@ -130,8 +142,14 @@
     <Compile Include="Symptoms.Designer.cs">
       <DependentUpon>Symptoms.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminAccount.resx">
+      <DependentUpon>AdminAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DiseaseTypes.resx">
       <DependentUpon>DiseaseTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorAccount.resx">
+      <DependentUpon>DoctorAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors.resx">
       <DependentUpon>Doctors.cs</DependentUpon>
