@@ -29,7 +29,10 @@ namespace Hospital
 
         private void Symptoms_Load(object sender, EventArgs e)
         {
-           
+            // TODO: This line of code loads data into the 'cDSSDataSet.Symptoms' table. You can move, or remove it, as needed.
+            this.symptomsTableAdapter.Fill(this.cDSSDataSet.Symptoms);
+            // TODO: This line of code loads data into the 'cDSSDataSet1.Symptoms' table. You can move, or remove it, as needed.
+
         }
 
         public void importExcel()
@@ -397,40 +400,7 @@ namespace Hospital
                 }
             }
         }
-
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // تجاهل النقر على رأس العمود
-            if (e.RowIndex < 0) return;
-
-            DataGridViewRow row = dataGridView.Rows[e.RowIndex];
-
-            // التحقق من وجود القيم قبل التعيين
-            text_SymptomId.Text = row.Cells["SymptomId"].Value?.ToString() ?? "";
-            text_PatientName.Text = row.Cells["SymptomName"].Value?.ToString() ?? "";
-            text_Patientdescription.Text = row.Cells["SymptomDescription"].Value?.ToString() ?? "";
-
-            // التعامل مع ComboBox بشكل صحيح
-            if (row.Cells["DiseaseTypeId"].Value != null)
-            {
-                int diseaseTypeId = Convert.ToInt32(row.Cells["DiseaseTypeId"].Value);
-
-                // البحث عن الـ ID في ComboBox وتحديد العنصر المناسب
-                foreach (DataRowView item in comb_DiseaseTypes.Items)
-                {
-                    if (Convert.ToInt32(item["DiseaseTypeId"]) == diseaseTypeId)
-                    {
-                        comb_DiseaseTypes.SelectedItem = item;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                comb_DiseaseTypes.SelectedIndex = -1;
-            }
-        }
-
+ 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -449,6 +419,39 @@ namespace Hospital
         private void text_search_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            // تجاهل النقر على رأس العمود
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dataGridView.Rows[e.RowIndex];
+
+            // التحقق من وجود القيم قبل التعيين
+            text_SymptomId.Text = row.Cells[0].Value?.ToString() ?? "";
+            text_PatientName.Text = row.Cells[1].Value?.ToString() ?? "";
+            text_Patientdescription.Text = row.Cells[2].Value?.ToString() ?? "";
+
+            // التعامل مع ComboBox بشكل صحيح
+            if (row.Cells[3].Value != null)
+            {
+                int diseaseTypeId = Convert.ToInt32(row.Cells[3].Value);
+
+                // البحث عن الـ ID في ComboBox وتحديد العنصر المناسب
+                foreach (DataRowView item in comb_DiseaseTypes.Items)
+                {
+                    if (Convert.ToInt32(item[3]) == diseaseTypeId)
+                    {
+                        comb_DiseaseTypes.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                comb_DiseaseTypes.SelectedIndex = -1;
+            }
         }
     }
 }

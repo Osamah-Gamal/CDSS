@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,28 +54,47 @@
             this.text_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.cDSSDataSet = new Hospital.CDSSDataSet();
+            this.doctorsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.doctorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doctorsTableAdapter = new Hospital.CDSSDataSetTableAdapters.DoctorsTableAdapter();
+            this.doctorsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(513, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Size = new System.Drawing.Size(124, 19);
             this.label1.TabIndex = 12;
             this.label1.Text = "اسم المستخدم";
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(545, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.Size = new System.Drawing.Size(94, 19);
             this.label2.TabIndex = 13;
             this.label2.Text = "كلمة المرور";
             // 
@@ -88,31 +111,34 @@
             // 
             // label4
             // 
+            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(913, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 19);
+            this.label4.Size = new System.Drawing.Size(87, 19);
             this.label4.TabIndex = 18;
             this.label4.Text = "رقم الهاتف";
             // 
             // label5
             // 
+            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(928, 164);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 19);
+            this.label5.Size = new System.Drawing.Size(76, 19);
             this.label5.TabIndex = 17;
             this.label5.Text = "التخصص";
             // 
             // label6
             // 
+            this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(253, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 19);
+            this.label6.Size = new System.Drawing.Size(97, 19);
             this.label6.TabIndex = 20;
             this.label6.Text = "اسم الدكتور";
             // 
@@ -204,7 +230,6 @@
             this.text_DoctorName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_DoctorName.Location = new System.Drawing.Point(26, 33);
             this.text_DoctorName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_DoctorName.Multiline = true;
             this.text_DoctorName.Name = "text_DoctorName";
             this.text_DoctorName.PlaceholderText = "اسم الدكتور";
             this.text_DoctorName.SelectedText = "";
@@ -223,12 +248,11 @@
             this.text_Specialization.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_Specialization.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_Specialization.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_Specialization.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Specialization.Font = new System.Drawing.Font("Tahoma", 8F);
             this.text_Specialization.ForeColor = System.Drawing.Color.Black;
             this.text_Specialization.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_Specialization.Location = new System.Drawing.Point(680, 187);
             this.text_Specialization.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_Specialization.Multiline = true;
             this.text_Specialization.Name = "text_Specialization";
             this.text_Specialization.PlaceholderText = "التخصص";
             this.text_Specialization.SelectedText = "";
@@ -252,7 +276,6 @@
             this.text_PhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_PhoneNumber.Location = new System.Drawing.Point(680, 262);
             this.text_PhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_PhoneNumber.Multiline = true;
             this.text_PhoneNumber.Name = "text_PhoneNumber";
             this.text_PhoneNumber.PlaceholderText = "رقم الهاتف";
             this.text_PhoneNumber.SelectedText = "";
@@ -276,7 +299,6 @@
             this.text_uesrname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_uesrname.Location = new System.Drawing.Point(315, 187);
             this.text_uesrname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_uesrname.Multiline = true;
             this.text_uesrname.Name = "text_uesrname";
             this.text_uesrname.PlaceholderText = "اسم المستخدم";
             this.text_uesrname.SelectedText = "";
@@ -300,7 +322,6 @@
             this.text_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_password.Location = new System.Drawing.Point(319, 262);
             this.text_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_password.Multiline = true;
             this.text_password.Name = "text_password";
             this.text_password.PasswordChar = '*';
             this.text_password.PlaceholderText = "كلمة المرور";
@@ -350,11 +371,12 @@
             // 
             // label7
             // 
+            this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(609, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 19);
+            this.label7.Size = new System.Drawing.Size(106, 19);
             this.label7.TabIndex = 30;
             this.label7.Text = "معرف الدكتور";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -385,7 +407,6 @@
             this.text_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_search.Location = new System.Drawing.Point(209, 348);
             this.text_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_search.Multiline = true;
             this.text_search.Name = "text_search";
             this.text_search.PlaceholderText = "...البحث بالاسم عن";
             this.text_search.SelectedText = "";
@@ -431,20 +452,129 @@
             // 
             // dataGridView
             // 
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.GridColor = System.Drawing.Color.CadetBlue;
-            this.dataGridView.Location = new System.Drawing.Point(212, 394);
+            this.dataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView.ColumnHeadersHeight = 21;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView.DataSource = this.doctorsBindingSource3;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.Location = new System.Drawing.Point(209, 396);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 62;
             this.dataGridView.RowTemplate.Height = 29;
-            this.dataGridView.Size = new System.Drawing.Size(898, 190);
-            this.dataGridView.TabIndex = 47;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick_1);
+            this.dataGridView.Size = new System.Drawing.Size(898, 188);
+            this.dataGridView.TabIndex = 72;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridView.ThemeStyle.HeaderStyle.Height = 21;
+            this.dataGridView.ThemeStyle.ReadOnly = false;
+            this.dataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView.ThemeStyle.RowsStyle.Height = 29;
+            this.dataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "DoctorId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "DoctorId";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DoctorName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "DoctorName";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Specialization";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Specialization";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PhoneNumber";
+            this.dataGridViewTextBoxColumn4.HeaderText = "PhoneNumber";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "UserName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "UserName";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // doctorsBindingSource3
+            // 
+            this.doctorsBindingSource3.DataMember = "Doctors";
+            this.doctorsBindingSource3.DataSource = this.cDSSDataSet;
+            // 
+            // cDSSDataSet
+            // 
+            this.cDSSDataSet.DataSetName = "CDSSDataSet";
+            this.cDSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // doctorsTableAdapter
+            // 
+            this.doctorsTableAdapter.ClearBeforeFill = true;
             // 
             // Doctors
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1286, 577);
             this.ControlBox = false;
@@ -472,7 +602,13 @@
             this.Name = "Doctors";
             this.Load += new System.EventHandler(this.Doctors_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,6 +637,24 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridView;
+        private CDSSDataSet cDSSDataSet;
+        private System.Windows.Forms.BindingSource doctorsBindingSource;
+        private CDSSDataSetTableAdapters.DoctorsTableAdapter doctorsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctorIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctorNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specializationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource doctorsBindingSource2;
+        private System.Windows.Forms.BindingSource doctorsBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.BindingSource doctorsBindingSource3;
     }
 }

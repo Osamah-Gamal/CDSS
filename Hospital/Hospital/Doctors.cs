@@ -210,22 +210,29 @@ namespace Hospital
 
         private void Doctors_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cDSSDataSet.Doctors' table. You can move, or remove it, as needed.
+            this.doctorsTableAdapter.Fill(this.cDSSDataSet.Doctors);
 
         }
 
-        
+
         // عند النقر على صف في DataGridView
 
-        private void dataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+
+
+        private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
+               
                 DataGridViewRow row = dataGridView.Rows[e.RowIndex];
-                text_doctorId.Text = row.Cells["DoctorId"].Value.ToString();
-                text_DoctorName.Text = row.Cells["DoctorName"].Value.ToString();
-                text_Specialization.Text = row.Cells["Specialization"].Value.ToString();
-                text_PhoneNumber.Text = row.Cells["PhoneNumber"].Value.ToString();
-                text_uesrname.Text = row.Cells["UserName"].Value.ToString();
+
+                text_doctorId.Text = row.Cells[0].Value.ToString();
+                text_DoctorName.Text = row.Cells[1].Value.ToString();
+                text_Specialization.Text = row.Cells[2].Value.ToString();
+                text_PhoneNumber.Text = row.Cells[3].Value.ToString();
+                text_uesrname.Text = row.Cells[4].Value.ToString();
                 text_password.Text = ""; // لا تعرض كلمة المرور لأسباب أمنية
             }
         }

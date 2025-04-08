@@ -53,10 +53,11 @@
             // 
             // label4
             // 
+            label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             label4.Location = new System.Drawing.Point(1, 8);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(60, 19);
+            label4.Size = new System.Drawing.Size(55, 19);
             label4.TabIndex = 11;
             label4.Text = "Type:";
             // 
@@ -170,19 +171,21 @@
             // 
             // lbe_date
             // 
+            this.lbe_date.AutoSize = true;
             this.lbe_date.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.lbe_date.Location = new System.Drawing.Point(274, 19);
             this.lbe_date.Name = "lbe_date";
-            this.lbe_date.Size = new System.Drawing.Size(66, 19);
+            this.lbe_date.Size = new System.Drawing.Size(59, 19);
             this.lbe_date.TabIndex = 5;
             this.lbe_date.Text = "Date :";
             // 
             // lbe_time
             // 
+            this.lbe_time.AutoSize = true;
             this.lbe_time.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.lbe_time.Location = new System.Drawing.Point(270, 51);
             this.lbe_time.Name = "lbe_time";
-            this.lbe_time.Size = new System.Drawing.Size(70, 19);
+            this.lbe_time.Size = new System.Drawing.Size(61, 19);
             this.lbe_time.TabIndex = 6;
             this.lbe_time.Text = "Time :";
             // 
@@ -201,46 +204,51 @@
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(1, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 19);
+            this.label1.Size = new System.Drawing.Size(52, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "User:";
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(1, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 19);
+            this.label2.Size = new System.Drawing.Size(32, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Id:";
             // 
             // lb_userid
             // 
+            this.lb_userid.AutoSize = true;
             this.lb_userid.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.lb_userid.Location = new System.Drawing.Point(64, 57);
             this.lb_userid.Name = "lb_userid";
-            this.lb_userid.Size = new System.Drawing.Size(151, 19);
+            this.lb_userid.Size = new System.Drawing.Size(59, 19);
             this.lb_userid.TabIndex = 10;
             this.lb_userid.Text = "..........";
             // 
             // lb_username
             // 
+            this.lb_username.AutoSize = true;
             this.lb_username.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.lb_username.Location = new System.Drawing.Point(64, 31);
             this.lb_username.Name = "lb_username";
-            this.lb_username.Size = new System.Drawing.Size(174, 19);
+            this.lb_username.Size = new System.Drawing.Size(59, 19);
             this.lb_username.TabIndex = 9;
             this.lb_username.Text = "..........";
             // 
             // lb_usertype
             // 
+            this.lb_usertype.AutoSize = true;
             this.lb_usertype.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.lb_usertype.Location = new System.Drawing.Point(64, 8);
             this.lb_usertype.Name = "lb_usertype";
-            this.lb_usertype.Size = new System.Drawing.Size(174, 19);
+            this.lb_usertype.Size = new System.Drawing.Size(59, 19);
             this.lb_usertype.TabIndex = 12;
             this.lb_usertype.Text = "..........";
             // 
@@ -255,7 +263,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(1444, 6);
+            this.guna2Button2.Location = new System.Drawing.Point(1442, 10);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(45, 40);
             this.guna2Button2.TabIndex = 64;
@@ -275,26 +283,29 @@
             // 
             // lbl_time
             // 
+            this.lbl_time.AutoSize = true;
             this.lbl_time.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.lbl_time.Location = new System.Drawing.Point(328, 52);
             this.lbl_time.Name = "lbl_time";
-            this.lbl_time.Size = new System.Drawing.Size(205, 19);
+            this.lbl_time.Size = new System.Drawing.Size(59, 19);
             this.lbl_time.TabIndex = 66;
             this.lbl_time.Text = "..........";
             // 
             // lbl_date
             // 
+            this.lbl_date.AutoSize = true;
             this.lbl_date.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.lbl_date.Location = new System.Drawing.Point(332, 20);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(201, 19);
+            this.lbl_date.Size = new System.Drawing.Size(59, 19);
             this.lbl_date.TabIndex = 65;
             this.lbl_date.Text = "..........";
             // 
             // Home
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1492, 744);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_time);
@@ -316,13 +327,13 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
             this.Name = "Home";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "الصفحة الرئيسية";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed_1);
             this.Load += new System.EventHandler(this.Home_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

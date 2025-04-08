@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btn_excel_add = new Guna.UI2.WinForms.Guna2Button();
             this.btn_excel_show = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +43,6 @@
             this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_update = new Guna.UI2.WinForms.Guna2Button();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.text_SymptomId = new Guna.UI2.WinForms.Guna2TextBox();
             this.text_Patientdescription = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,8 +52,20 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.symptomsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cDSSDataSet = new Hospital.CDSSDataSet();
+            this.symptomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.symptomsTableAdapter = new Hospital.CDSSDataSetTableAdapters.SymptomsTableAdapter();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.symptomsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDSSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.symptomsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Button1
@@ -112,6 +127,7 @@
             // 
             // label6
             // 
+            this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(264, 16);
@@ -122,6 +138,7 @@
             // 
             // label4
             // 
+            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(400, 174);
@@ -132,6 +149,7 @@
             // 
             // label5
             // 
+            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(982, 123);
@@ -155,7 +173,6 @@
             this.text_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_search.Location = new System.Drawing.Point(240, 339);
             this.text_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_search.Multiline = true;
             this.text_search.Name = "text_search";
             this.text_search.PasswordChar = '*';
             this.text_search.PlaceholderText = "...البحث بالاسم عن";
@@ -237,18 +254,6 @@
             this.btn_add.Text = "أضافة";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // dataGridView
-            // 
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(240, 385);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 62;
-            this.dataGridView.RowTemplate.Height = 29;
-            this.dataGridView.Size = new System.Drawing.Size(898, 190);
-            this.dataGridView.TabIndex = 56;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -329,6 +334,7 @@
             // 
             // label7
             // 
+            this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(718, 16);
@@ -354,7 +360,6 @@
             this.text_PatientName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_PatientName.Location = new System.Drawing.Point(23, 38);
             this.text_PatientName.Margin = new System.Windows.Forms.Padding(0);
-            this.text_PatientName.Multiline = true;
             this.text_PatientName.Name = "text_PatientName";
             this.text_PatientName.PlaceholderText = "اسم العرض";
             this.text_PatientName.SelectedText = "";
@@ -407,13 +412,124 @@
             this.guna2Panel3.Size = new System.Drawing.Size(225, 143);
             this.guna2Panel3.TabIndex = 70;
             // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView.ColumnHeadersHeight = 21;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView.DataSource = this.symptomsBindingSource1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.Location = new System.Drawing.Point(240, 387);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.RowHeadersWidth = 62;
+            this.dataGridView.RowTemplate.Height = 29;
+            this.dataGridView.Size = new System.Drawing.Size(898, 188);
+            this.dataGridView.TabIndex = 76;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridView.ThemeStyle.HeaderStyle.Height = 21;
+            this.dataGridView.ThemeStyle.ReadOnly = false;
+            this.dataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView.ThemeStyle.RowsStyle.Height = 29;
+            this.dataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick_1);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "SymptomId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "SymptomId";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "SymptomName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "SymptomName";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SymptomDescription";
+            this.dataGridViewTextBoxColumn3.HeaderText = "SymptomDescription";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "DiseaseTypeId";
+            this.dataGridViewTextBoxColumn4.HeaderText = "DiseaseTypeId";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // symptomsBindingSource1
+            // 
+            this.symptomsBindingSource1.DataMember = "Symptoms";
+            this.symptomsBindingSource1.DataSource = this.cDSSDataSet;
+            // 
+            // cDSSDataSet
+            // 
+            this.cDSSDataSet.DataSetName = "CDSSDataSet";
+            this.cDSSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // symptomsBindingSource
+            // 
+            this.symptomsBindingSource.DataMember = "Symptoms";
+            // 
+            // symptomsTableAdapter
+            // 
+            this.symptomsTableAdapter.ClearBeforeFill = true;
+            // 
             // Symptoms
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1286, 577);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.comb_DiseaseTypes);
             this.Controls.Add(this.text_Patientdescription);
@@ -422,7 +538,6 @@
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -437,9 +552,14 @@
             this.Name = "Symptoms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Symptoms_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.symptomsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDSSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.symptomsBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -456,7 +576,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_delete;
         private Guna.UI2.WinForms.Guna2Button btn_update;
         private Guna.UI2.WinForms.Guna2Button btn_add;
-        private System.Windows.Forms.DataGridView dataGridView;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox text_SymptomId;
         private Guna.UI2.WinForms.Guna2TextBox text_Patientdescription;
@@ -466,5 +585,18 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridView;
+         private System.Windows.Forms.BindingSource symptomsBindingSource;
+         private System.Windows.Forms.DataGridViewTextBoxColumn symptomIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn symptomNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn symptomDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diseaseTypeIdDataGridViewTextBoxColumn;
+        private CDSSDataSet cDSSDataSet;
+        private System.Windows.Forms.BindingSource symptomsBindingSource1;
+        private CDSSDataSetTableAdapters.SymptomsTableAdapter symptomsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

@@ -37,6 +37,10 @@ namespace Hospital
 
         private void Patients_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cDSSDataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.cDSSDataSet.Patients);
+            // TODO: This line of code loads data into the 'cDSSDataSet2.Patients' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'cDSSDataSet3.Patients' table. You can move, or remove it, as needed.
 
         }
 
@@ -215,6 +219,44 @@ namespace Hospital
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        
+
+        private void dataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            // تجاهل النقر على رأس العمود
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dataGridView.Rows[e.RowIndex];
+
+            // التحقق من وجود القيم قبل التعيين
+            text_PatientId.Text = row.Cells[0].Value?.ToString() ?? "";
+            text_PatientName.Text = row.Cells[1].Value?.ToString() ?? "";
+            text_Address.Text = row.Cells[4].Value?.ToString() ?? "";
+            text_DateofBirth.Text = row.Cells[2].Value?.ToString() ?? "";
+            text_PhoneNumber.Text = row.Cells[5].Value?.ToString() ?? "";
+
+            // التعامل مع ComboBox بشكل صحيح
+            if (row.Cells[3].Value != null)
+            {
+                int diseaseTypeId = Convert.ToInt32(row.Cells[3].Value);
+
+                // البحث عن الـ ID في ComboBox وتحديد العنصر المناسب
+                foreach (DataRowView item in comb_Gender.Items)
+                {
+                    if (Convert.ToInt32(item[3]) == diseaseTypeId)
+                    {
+                        comb_Gender.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                comb_Gender.SelectedIndex = -1;
+            }
+
         }
     }
 }

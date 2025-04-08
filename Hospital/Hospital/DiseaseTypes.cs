@@ -177,7 +177,10 @@ namespace Hospital
 
         private void DiseaseTypes_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'cDSSDataSet.DiseaseTypes' table. You can move, or remove it, as needed.
+            this.diseaseTypesTableAdapter.Fill(this.cDSSDataSet.DiseaseTypes);
+            // TODO: This line of code loads data into the 'cDSSDataSet1.DiseaseTypes' table. You can move, or remove it, as needed.
+ 
         }
         private bool ValidateInputs()
         {
@@ -310,17 +313,7 @@ namespace Hospital
             }
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridView.Rows[e.RowIndex];
-                text_DiseaseTypesId.Text = row.Cells["DiseaseTypeId"].Value.ToString();
-                text_DiseaseTypes.Text = row.Cells["DiseaseTypeName"].Value.ToString();
-                text_DescriptionDiseaseTypes.Text = row.Cells["DiseaseTypeDescription"].Value.ToString();
-               
-            }
-        }
+      
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -362,6 +355,18 @@ namespace Hospital
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView.Rows[e.RowIndex];
+                text_DiseaseTypesId.Text = row.Cells[0].Value.ToString();
+                text_DiseaseTypes.Text = row.Cells[1].Value.ToString();
+                text_DescriptionDiseaseTypes.Text = row.Cells[2].Value.ToString();
+
+            }
         }
     }
 }

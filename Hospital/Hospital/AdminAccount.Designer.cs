@@ -86,7 +86,6 @@
             this.text_Id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_Id.Location = new System.Drawing.Point(136, 155);
             this.text_Id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_Id.Multiline = true;
             this.text_Id.Name = "text_Id";
             this.text_Id.PlaceholderText = "Id";
             this.text_Id.SelectedText = "";
@@ -96,11 +95,12 @@
             // 
             // label6
             // 
+            this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(139, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 19);
+            this.label6.Size = new System.Drawing.Size(83, 19);
             this.label6.TabIndex = 47;
             this.label6.Text = "Admin Id";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,7 +121,6 @@
             this.text_fullname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_fullname.Location = new System.Drawing.Point(136, 240);
             this.text_fullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_fullname.Multiline = true;
             this.text_fullname.Name = "text_fullname";
             this.text_fullname.PlaceholderText = "Full name";
             this.text_fullname.SelectedText = "";
@@ -130,11 +129,12 @@
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(139, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 19);
+            this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 49;
             this.label2.Text = "Full name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,7 +155,6 @@
             this.text_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_username.Location = new System.Drawing.Point(136, 320);
             this.text_username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_username.Multiline = true;
             this.text_username.Name = "text_username";
             this.text_username.PlaceholderText = "UserName";
             this.text_username.SelectedText = "";
@@ -164,11 +163,12 @@
             // 
             // label3
             // 
+            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(139, 296);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 19);
+            this.label3.Size = new System.Drawing.Size(96, 19);
             this.label3.TabIndex = 51;
             this.label3.Text = "User name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,7 +189,6 @@
             this.text_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_password.Location = new System.Drawing.Point(136, 400);
             this.text_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.text_password.Multiline = true;
             this.text_password.Name = "text_password";
             this.text_password.PlaceholderText = "Password";
             this.text_password.SelectedText = "";
@@ -198,11 +197,12 @@
             // 
             // label4
             // 
+            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(139, 376);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 19);
+            this.label4.Size = new System.Drawing.Size(87, 19);
             this.label4.TabIndex = 53;
             this.label4.Text = "Password";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,7 +229,8 @@
             // 
             // AdminAccount
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(639, 542);
             this.ControlBox = false;
             this.Controls.Add(this.btn_update);
