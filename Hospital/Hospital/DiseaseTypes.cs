@@ -11,8 +11,7 @@ namespace Hospital
     public partial class DiseaseTypes : Form    
     {
         // سلسلة الاتصال بقاعدة البيانات
-        string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
-
+        string connectionString = "Server=MOHAMMED-ESMAIL;Database=CDSS;Integrated Security=True;";
         public DiseaseTypes()
         {
             InitializeComponent();
@@ -177,9 +176,7 @@ namespace Hospital
 
         private void DiseaseTypes_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cDSSDataSet.DiseaseTypes' table. You can move, or remove it, as needed.
-            this.diseaseTypesTableAdapter.Fill(this.cDSSDataSet.DiseaseTypes);
-            // TODO: This line of code loads data into the 'cDSSDataSet1.DiseaseTypes' table. You can move, or remove it, as needed.
+           
  
         }
         private bool ValidateInputs()

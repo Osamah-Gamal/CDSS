@@ -14,7 +14,8 @@ namespace Hospital
 {
     public partial class AdminAccount : MetroForm
     {
-        string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
+        //DESKTOP-ALF92KC\\OSAMAH
+        string connectionString = "Server=MOHAMMED-ESMAIL;Database=CDSS;Integrated Security=True;";
 
         int UserID;
       

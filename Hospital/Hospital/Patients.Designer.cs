@@ -82,9 +82,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(246, 4);
+            this.label6.Location = new System.Drawing.Point(164, 3);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 19);
+            this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 39;
             this.label6.Text = "اسم المريض";
             // 
@@ -93,9 +94,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(535, 144);
+            this.label4.Location = new System.Drawing.Point(357, 96);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 19);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 37;
             this.label4.Text = "رقم الهاتف";
             // 
@@ -104,9 +106,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(947, 144);
+            this.label5.Location = new System.Drawing.Point(631, 96);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 19);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 36;
             this.label5.Text = "العمر";
             // 
@@ -115,9 +118,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(564, 222);
+            this.label2.Location = new System.Drawing.Point(376, 148);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 19);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 33;
             this.label2.Text = "العنوان";
             // 
@@ -126,9 +130,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(933, 224);
+            this.label1.Location = new System.Drawing.Point(622, 149);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 19);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 32;
             this.label1.Text = "الجنس";
             // 
@@ -143,9 +148,10 @@
             this.btn_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_search.ForeColor = System.Drawing.Color.White;
-            this.btn_search.Location = new System.Drawing.Point(529, 342);
+            this.btn_search.Location = new System.Drawing.Point(353, 228);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(141, 38);
+            this.btn_search.Size = new System.Drawing.Size(94, 25);
             this.btn_search.TabIndex = 47;
             this.btn_search.Text = "بحث";
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
@@ -161,9 +167,10 @@
             this.btn_delete.FillColor = System.Drawing.Color.Maroon;
             this.btn_delete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Location = new System.Drawing.Point(676, 342);
+            this.btn_delete.Location = new System.Drawing.Point(451, 228);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(141, 38);
+            this.btn_delete.Size = new System.Drawing.Size(94, 25);
             this.btn_delete.TabIndex = 48;
             this.btn_delete.Text = "حذف";
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
@@ -179,9 +186,10 @@
             this.btn_update.FillColor = System.Drawing.Color.Navy;
             this.btn_update.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Location = new System.Drawing.Point(824, 342);
+            this.btn_update.Location = new System.Drawing.Point(549, 228);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(141, 38);
+            this.btn_update.Size = new System.Drawing.Size(94, 25);
             this.btn_update.TabIndex = 49;
             this.btn_update.Text = "تعديل";
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
@@ -197,9 +205,10 @@
             this.btn_add.FillColor = System.Drawing.Color.Green;
             this.btn_add.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(971, 342);
+            this.btn_add.Location = new System.Drawing.Point(647, 228);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(141, 38);
+            this.btn_add.Size = new System.Drawing.Size(94, 25);
             this.btn_add.TabIndex = 50;
             this.btn_add.Text = "أضافة";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
@@ -210,9 +219,10 @@
             this.guna2Panel2.BorderRadius = 4;
             this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.text_search);
-            this.guna2Panel2.Location = new System.Drawing.Point(214, 339);
+            this.guna2Panel2.Location = new System.Drawing.Point(143, 226);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(898, 43);
+            this.guna2Panel2.Size = new System.Drawing.Size(599, 29);
             this.guna2Panel2.TabIndex = 51;
             // 
             // text_search
@@ -226,15 +236,14 @@
             this.text_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.text_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_search.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_search.Font = new System.Drawing.Font("Tahoma", 8F);
             this.text_search.ForeColor = System.Drawing.Color.Navy;
             this.text_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_search.Location = new System.Drawing.Point(2, 1);
-            this.text_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_search.Location = new System.Drawing.Point(1, 1);
             this.text_search.Name = "text_search";
             this.text_search.PlaceholderText = "...البحث بالاسم عن";
             this.text_search.SelectedText = "";
-            this.text_search.Size = new System.Drawing.Size(307, 40);
+            this.text_search.Size = new System.Drawing.Size(205, 27);
             this.text_search.TabIndex = 62;
             this.text_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -252,12 +261,11 @@
             this.text_PatientName.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_PatientName.ForeColor = System.Drawing.Color.Black;
             this.text_PatientName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_PatientName.Location = new System.Drawing.Point(14, 26);
-            this.text_PatientName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_PatientName.Location = new System.Drawing.Point(9, 17);
             this.text_PatientName.Name = "text_PatientName";
             this.text_PatientName.PlaceholderText = "اسم المريض";
             this.text_PatientName.SelectedText = "";
-            this.text_PatientName.Size = new System.Drawing.Size(337, 40);
+            this.text_PatientName.Size = new System.Drawing.Size(225, 27);
             this.text_PatientName.TabIndex = 53;
             this.text_PatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -275,12 +283,11 @@
             this.text_DateofBirth.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_DateofBirth.ForeColor = System.Drawing.Color.Black;
             this.text_DateofBirth.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_DateofBirth.Location = new System.Drawing.Point(655, 166);
-            this.text_DateofBirth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_DateofBirth.Location = new System.Drawing.Point(437, 111);
             this.text_DateofBirth.Name = "text_DateofBirth";
             this.text_DateofBirth.PlaceholderText = "العمر";
             this.text_DateofBirth.SelectedText = "";
-            this.text_DateofBirth.Size = new System.Drawing.Size(337, 40);
+            this.text_DateofBirth.Size = new System.Drawing.Size(225, 27);
             this.text_DateofBirth.TabIndex = 54;
             this.text_DateofBirth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -299,9 +306,10 @@
             this.comb_Gender.Items.AddRange(new object[] {
             "ذكر",
             "انثى"});
-            this.comb_Gender.Location = new System.Drawing.Point(652, 244);
+            this.comb_Gender.Location = new System.Drawing.Point(435, 163);
+            this.comb_Gender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comb_Gender.Name = "comb_Gender";
-            this.comb_Gender.Size = new System.Drawing.Size(340, 36);
+            this.comb_Gender.Size = new System.Drawing.Size(228, 36);
             this.comb_Gender.TabIndex = 55;
             // 
             // text_PhoneNumber
@@ -318,12 +326,11 @@
             this.text_PhoneNumber.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_PhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.text_PhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_PhoneNumber.Location = new System.Drawing.Point(286, 166);
-            this.text_PhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_PhoneNumber.Location = new System.Drawing.Point(191, 111);
             this.text_PhoneNumber.Name = "text_PhoneNumber";
             this.text_PhoneNumber.PlaceholderText = "رقم الهاتف";
             this.text_PhoneNumber.SelectedText = "";
-            this.text_PhoneNumber.Size = new System.Drawing.Size(337, 40);
+            this.text_PhoneNumber.Size = new System.Drawing.Size(225, 27);
             this.text_PhoneNumber.TabIndex = 56;
             this.text_PhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -341,12 +348,11 @@
             this.text_Address.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_Address.ForeColor = System.Drawing.Color.Black;
             this.text_Address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_Address.Location = new System.Drawing.Point(285, 244);
-            this.text_Address.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_Address.Location = new System.Drawing.Point(190, 163);
             this.text_Address.Name = "text_Address";
             this.text_Address.PlaceholderText = "العنوان";
             this.text_Address.SelectedText = "";
-            this.text_Address.Size = new System.Drawing.Size(337, 40);
+            this.text_Address.Size = new System.Drawing.Size(225, 27);
             this.text_Address.TabIndex = 57;
             this.text_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -365,12 +371,11 @@
             this.text_PatientId.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_PatientId.ForeColor = System.Drawing.Color.Black;
             this.text_PatientId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_PatientId.Location = new System.Drawing.Point(385, 26);
-            this.text_PatientId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.text_PatientId.Location = new System.Drawing.Point(257, 17);
             this.text_PatientId.Name = "text_PatientId";
             this.text_PatientId.PlaceholderText = "معرف المريض";
             this.text_PatientId.SelectedText = "";
-            this.text_PatientId.Size = new System.Drawing.Size(337, 40);
+            this.text_PatientId.Size = new System.Drawing.Size(225, 27);
             this.text_PatientId.TabIndex = 59;
             this.text_PatientId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -379,9 +384,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(608, 3);
+            this.label7.Location = new System.Drawing.Point(405, 2);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 19);
+            this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 58;
             this.label7.Text = "معرف المريض";
             // 
@@ -394,9 +400,10 @@
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.text_PatientName);
             this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Location = new System.Drawing.Point(271, 51);
+            this.guna2Panel1.Location = new System.Drawing.Point(181, 34);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(737, 247);
+            this.guna2Panel1.Size = new System.Drawing.Size(491, 165);
             this.guna2Panel1.TabIndex = 60;
             // 
             // guna2Button1
@@ -410,9 +417,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(1133, 341);
+            this.guna2Button1.Location = new System.Drawing.Point(755, 227);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(141, 38);
+            this.guna2Button1.Size = new System.Drawing.Size(94, 25);
             this.guna2Button1.TabIndex = 61;
             this.guna2Button1.Text = "تهية الصفحة";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -428,9 +436,10 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Maroon;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(1240, 1);
+            this.guna2Button2.Location = new System.Drawing.Point(827, 1);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(45, 40);
+            this.guna2Button2.Size = new System.Drawing.Size(30, 27);
             this.guna2Button2.TabIndex = 62;
             this.guna2Button2.Text = "X";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -464,18 +473,19 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridView.Location = new System.Drawing.Point(214, 388);
+            this.dataGridView.Location = new System.Drawing.Point(143, 259);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 62;
             this.dataGridView.RowTemplate.Height = 29;
-            this.dataGridView.Size = new System.Drawing.Size(898, 188);
+            this.dataGridView.Size = new System.Drawing.Size(599, 125);
             this.dataGridView.TabIndex = 74;
             this.dataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -579,10 +589,10 @@
             // 
             // Patients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1286, 577);
+            this.ClientSize = new System.Drawing.Size(857, 385);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.guna2Button2);
@@ -603,6 +613,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Patients";
             this.Load += new System.EventHandler(this.Patients_Load);
             this.guna2Panel2.ResumeLayout(false);

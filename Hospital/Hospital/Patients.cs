@@ -19,8 +19,7 @@ namespace Hospital
         public int UserID { get; set; }
 
         // سلسلة الاتصال بقاعدة البيانات
-        string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
-
+        string connectionString = "Server=MOHAMMED-ESMAIL;Database=CDSS;Integrated Security=True;";
         public Patients()
         {
             InitializeComponent();
@@ -37,10 +36,7 @@ namespace Hospital
 
         private void Patients_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cDSSDataSet.Patients' table. You can move, or remove it, as needed.
-            this.patientsTableAdapter.Fill(this.cDSSDataSet.Patients);
-            // TODO: This line of code loads data into the 'cDSSDataSet2.Patients' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'cDSSDataSet3.Patients' table. You can move, or remove it, as needed.
+           
 
         }
 
@@ -236,26 +232,8 @@ namespace Hospital
             text_Address.Text = row.Cells[4].Value?.ToString() ?? "";
             text_DateofBirth.Text = row.Cells[2].Value?.ToString() ?? "";
             text_PhoneNumber.Text = row.Cells[5].Value?.ToString() ?? "";
-
-            // التعامل مع ComboBox بشكل صحيح
-            if (row.Cells[3].Value != null)
-            {
-                int diseaseTypeId = Convert.ToInt32(row.Cells[3].Value);
-
-                // البحث عن الـ ID في ComboBox وتحديد العنصر المناسب
-                foreach (DataRowView item in comb_Gender.Items)
-                {
-                    if (Convert.ToInt32(item[3]) == diseaseTypeId)
-                    {
-                        comb_Gender.SelectedItem = item;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                comb_Gender.SelectedIndex = -1;
-            }
+            comb_Gender.SelectedItem = row.Cells[3].Value?.ToString() ?? "";
+           
 
         }
     }

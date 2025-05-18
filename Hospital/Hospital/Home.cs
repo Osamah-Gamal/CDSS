@@ -41,7 +41,7 @@ namespace Hospital
             // تعيين الوقت الحالي فورًا
             UpdateTime();
 
-
+            
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -123,18 +123,27 @@ namespace Hospital
 
         private void btn_doctors_Click(object sender, EventArgs e)
         {
-            // مسح أي محتوى داخل الـ Panel قبل عرض الفورم الجديد
             show_screen.Controls.Clear();
 
-            // إنشاء الفورم الذي تريد عرضه
-            Doctors doctorsForm = new Doctors();
-            doctorsForm.TopLevel = false;  // يجعل الفورم غير مستقل
-            doctorsForm.Dock = DockStyle.Fill;  // يجعل الفورم يملأ الـ Panel بالكامل
-            doctorsForm.FormBorderStyle = FormBorderStyle.None; // إزالة حدود النموذج
+
+
+            Doctors re = new Doctors();
+
+
+           
+
+            re.TopLevel = false;  // يجعل الفورم غير مستقل
+            re.Dock = DockStyle.Fill;  // يجعل الفورم يملأ الـ Panel بالكامل
+            re.FormBorderStyle = FormBorderStyle.None; // إزالة حدود النموذج
+
+
+
 
             // إضافة الفورم إلى الـ Panel
-            show_screen.Controls.Add(doctorsForm);
-            doctorsForm.Show();
+            show_screen.Controls.Add(re);
+
+
+            re.Show();
         }
 
         private void Home_FormClosed_1(object sender, FormClosedEventArgs e)
@@ -199,6 +208,73 @@ namespace Hospital
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+            // مسح أي محتوى داخل الـ Panel قبل عرض الفورم الجديد
+            show_screen.Controls.Clear();
+
+
+            Results re = new Results();
+
+            re.TopLevel = false;  // يجعل الفورم غير مستقل
+            re.Dock = DockStyle.Fill;  // يجعل الفورم يملأ الـ Panel بالكامل
+            re.FormBorderStyle = FormBorderStyle.None; // إزالة حدود النموذج
+
+
+            // إضافة الفورم إلى الـ Panel
+            show_screen.Controls.Add(re);
+
+
+            re.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            // مسح أي محتوى داخل الـ Panel قبل عرض الفورم الجديد
+            show_screen.Controls.Clear();
+
+            int userId = Convert.ToInt32(lb_userid.Text);
+
+            analysis ana = new analysis();
+
+            // إنشاء مثيل من patient وتمرير البيانات إليه
+            ana.UserID = userId;
+
+            // تعيين البيانات في Label
+            ana.SetUserData();
+
+            ana.TopLevel = false;  // يجعل الفورم غير مستقل
+            ana.Dock = DockStyle.Fill;  // يجعل الفورم يملأ الـ Panel بالكامل
+            ana.FormBorderStyle = FormBorderStyle.None; // إزالة حدود النموذج
+
+
+            // إضافة الفورم إلى الـ Panel
+            show_screen.Controls.Add(ana);
+
+
+            ana.Show();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            // مسح أي محتوى داخل الـ Panel قبل عرض الفورم الجديد
+            show_screen.Controls.Clear();
+
+
+            HistoryForm his = new HistoryForm();
+
+            his.TopLevel = false;  // يجعل الفورم غير مستقل
+            his.Dock = DockStyle.Fill;  // يجعل الفورم يملأ الـ Panel بالكامل
+            his.FormBorderStyle = FormBorderStyle.None; // إزالة حدود النموذج
+
+
+            // إضافة الفورم إلى الـ Panel
+            show_screen.Controls.Add(his);
+
+
+            his.Show();
+        }
+
+        private void show_screen_Paint(object sender, PaintEventArgs e)
         {
 
         }

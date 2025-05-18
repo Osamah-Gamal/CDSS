@@ -8,8 +8,7 @@ namespace Hospital
     public partial class Doctors : Form
     {
         // سلسلة الاتصال بقاعدة البيانات
-        string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
-
+        string connectionString = "Server=MOHAMMED-ESMAIL;Database=CDSS;Integrated Security=True;";
         public Doctors()
         {
             InitializeComponent();
@@ -211,7 +210,6 @@ namespace Hospital
         private void Doctors_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'cDSSDataSet.Doctors' table. You can move, or remove it, as needed.
-            this.doctorsTableAdapter.Fill(this.cDSSDataSet.Doctors);
 
         }
 

@@ -18,7 +18,8 @@ namespace Hospital
     public partial class Symptoms :  Form
     {
         // سلسلة الاتصال بقاعدة البيانات
-        string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
+        string connectionString = "Server=MOHAMMED-ESMAIL;Database=CDSS;Integrated Security=True;";
+
         public Symptoms()
         {
             InitializeComponent();

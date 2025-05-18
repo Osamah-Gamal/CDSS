@@ -14,8 +14,7 @@ namespace Hospital
 {
     public partial class Form1 : MetroForm
     {
-        string connectionString = "Server=DESKTOP-P90JUS9\\ZEYAD;Database=CDSS;Integrated Security=True;";
-
+        string connectionString = "Server=MOHAMMED-ESMAIL;Database=CDSS;Integrated Security=True;";
         public Form1()
         {
             InitializeComponent();
@@ -45,7 +44,7 @@ namespace Hospital
             string query = "";
             if (usertype == "Admin")
             {
-                query = "SELECT AdminId AS UserId, AdminName AS UserName FROM Admins WHERE AdminName = @Username AND AdminPassword = @Password";
+                query = "SELECT AdminId AS UserId, AdminName AS UserName FROM Admins WHERE UserName = @Username AND AdminPassword = @Password";
             }
             else if (usertype == "Doctor")
             {
